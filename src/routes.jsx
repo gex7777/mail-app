@@ -1,6 +1,6 @@
 import { Navigate, useRoutes } from "react-router-dom";
 
-import CustomList from "./components/CustomList/customList";
+import CustomList from "./components/CustomList";
 import inbox from "../../1_inbox .json";
 import spam from "../../1_spam.json";
 import Layout from "./layout/Layout";
