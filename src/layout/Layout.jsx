@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import PrimarySearchAppBar from "../components/CustomAppBar/CustomAppBar";
+import PrimarySearchAppBar from "../components/CustomAppBar";
 import { CustomDrawer } from "../components/CustomDrawer/CustomDrawer";
 
 const Layout = () => {
