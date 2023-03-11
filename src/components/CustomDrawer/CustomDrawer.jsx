@@ -40,7 +40,7 @@ export const CustomDrawer = ({ children }) => {
           </List>
         </Box>
       </MuiDrawer>
-      <Box component="main" sx={{ flexGrow: 1, marginTop: 8 }}>
+      <Box component="main" sx={{ marginTop: "7vh", height: "93vh" }}>
         {children}
       </Box>
     </Box>
