@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
@@ -11,7 +11,12 @@ import FlagIcon from "@mui/icons-material/Flag";
 import Box from "@mui/material/Box";
 import { Stack } from "@mui/material";
 import Preview from "./Preview";
+
 const CustomList = ({ data }) => {
+  const [selectedEmail, setSelectedEmail] = useState(null);
+  function handleSelect(item) {
+    setSelectedEmail(item);
+  }
   return (
     <Stack
       direction={"row"}
@@ -24,7 +29,10 @@ const CustomList = ({ data }) => {
         >
           {data.map((item) => (
             <div key={item.mId}>
-              <ListItem alignItems="flex-start">
+              <ListItem
+                alignItems="flex-start"
+                onClick={() => handleSelect(item)}
+              >
                 <ListItemAvatar>
                   <Avatar alt="Remy Sharp" />
                 </ListItemAvatar>
@@ -55,7 +63,7 @@ const CustomList = ({ data }) => {
         </List>
       </Box>
       <Box>
-        <Preview></Preview>
+        <Preview email={selectedEmail} />
       </Box>
     </Stack>
   );
