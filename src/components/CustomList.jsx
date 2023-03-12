@@ -63,7 +63,7 @@ const CustomList = ({ data }) => {
         </List>
       </Box>
       <Box>
-        <Preview email={selectedEmail} />
+        <Preview key={selectedEmail} email={selectedEmail} />
       </Box>
     </Stack>
   );
